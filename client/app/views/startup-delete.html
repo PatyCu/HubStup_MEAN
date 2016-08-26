@@ -1,0 +1,7 @@
+<form role="form" ng-controller="StartupDeleteCtrl as startupDelCont">
+  <p>Are you sure you wish to delete the startup {{ startupDelCont.startup.name }}?</p>
+  <div class="form-group">
+    <input type="submit" class="btn btn-danger" ng-click="startupDelCont.deleteStartup()" value="Yes">
+    <button ng-click="startupDelCont.back()" type="button" class="btn btn-default">No</button>
+  </div>
+</form>

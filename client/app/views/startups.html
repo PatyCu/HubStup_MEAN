@@ -1,0 +1,27 @@
+<div class="jumbotron">
+	<a class="btn btn-primary" href="/#/create/startup"><span class="glyphicon glyphicon-plus"></span> Create Startup</a>
+	<br>
+	<table ng-controller="StartupsCtrl as startupsCont" class = "table table-striped table-background">
+		<thead>
+			<th>Name</th>
+			<th>URL</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="startup in startupsCont.startups">
+				<td><a ng-href="/#/startup/{{ startup._id }}">{{ startup.name }}</a></td>
+				<td>{{ startup.url }}</td>
+				<td>
+		        	<div class="button-group">
+		          		<a ng-href="/#/startup/{{ startup._id }}/edit" class="btn btn-default">
+		            		<span class="glyphicon glyphicon-edit"></span>
+		          		</a>
+		          		<a ng-href="/#/startup/{{ startup._id }}/delete" class="btn btn-danger">
+		            		<span class="glyphicon glyphicon-remove-circle"></span>
+		          		</a>
+		        	</div>
+		      	</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
